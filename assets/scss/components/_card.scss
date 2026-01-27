@@ -4,6 +4,7 @@
 .card{
     &__icon{
         font-size: 40px;
-        color:variables.$weather-blossom;
+        color:variables.$weather-purple;
+        background-color: variables.$weather-sky;
     }
 }

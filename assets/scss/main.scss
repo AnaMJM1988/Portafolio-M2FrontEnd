@@ -1,11 +1,12 @@
 // abstracts
 @use './abstracts/variables';
+@use './abstracts/mixins';
 // vendors
 
 // base
-
+@use './base/base';
 // layout
-
+@use './layout/footer';
 // components
 @use './components/card'
 
