@@ -9,8 +9,6 @@ cardLinks.forEach(function (link) {
   });
 });
 
-
-
 //Array de lugares: contendrá un listado de ciudades (mínimo 5)
 const lugares = [
   {
@@ -315,6 +313,7 @@ const lugares = [
     ],
   },
 ];
+
 //Iconos para los estados del tiempo, se agregar dinamicamente dependiendo del estado actual del clima
 const ICONOS = {
   Soleado: "bi bi-brightness-high ",
@@ -324,29 +323,12 @@ const ICONOS = {
   Nublado: "bi bi-cloudy",
 };
 
-//Mostrar los lugares en el Index.html
-const lugaresContainer = document.getElementById("lugares");
+//Obtener el ID enviado por parametro en la URL
 
-const mostrarLugares = () => {
-  lugares.forEach((lugar) => {
-    const tarjeta = `
-         <div class="col">
-    <div class="card text-center">
-      <i class="bi ${ICONOS[lugar.estadoActual]} card__icon"></i>
-      <div class="card-body">
-        <h5 class="card-title">${lugar.nombre}</h5>
-        <p class="card-text">${lugar.tempActual}°C</p>
-        <p class="card-text">${lugar.estadoActual}</p>
-      </div>
-      <div class="card-body">
-        <a class="card-link" href="./detalle.html?id=${lugar.id}">Ver detalle</a> 
-      </div>      
-     </div>
- </div>
-        `;
+const urlParams = new URLSearchParams(window.location.search);
 
-    lugaresContainer.innerHTML += tarjeta;//Se va a ir agregando cada tarjeta por cada lugar que haya en el array lugares
-  });
-};
+//Extraer los id de los parámetros
+const locationId = urlParams.get("id");
+//console.log(locationId);
 
-mostrarLugares();
+//Filtrar el lugar del array a partir del ID
