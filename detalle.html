@@ -52,34 +52,12 @@
   </div>
 </nav> 
 <main class="container my-4">
-    <section class="row">
-        <div class="col col-lg-8">
-          <h1>El tiempo en:</h1>
-      
-          <!--Card horizontal start-->
-          <div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-lg-4 d-flex justify-content-center align-items-center">
-      <i class="bi bi-brightness-high" style="font-size: 90px"></i>
-    </div>
-    <div class="col-lg-8">
-      <div class="card-body">
-        <h2 class="card-title">Santiago</h2>
-         <ul class="list-group list-group-flush">
-           <li class="list-group-item">Soleado</li>
-           <li class="list-group-item">Temperatura: 35°C </li>
-           <li class="list-group-item">Humedad: 10%</li>
-           <li class="list-group-item">Viento: 6 Km/h</li>
-        </ul>
-        <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-          
-          
-          <!--Card horizontal end-->
-        </div>
+    <div class="row">
+      <h1>El tiempo en:</h1>
+        <div class="col col-lg-8" id="lugar">
+          </div>
+      <!--El lugar del contenido se mostrará dinámicamente-->
+        
 
         <div class="col col-lg-4">
           <h3>Pronóstico semanal</h3>
@@ -96,10 +74,32 @@
             
             </ul>
           </div>
-
-
         </div>
     </section>   
+  <section class="mt-5">
+    <h3>Estadísticas de la semana</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Temperatura Mínima</th>
+        <th scope="col">Temperatura Máxima</th>
+        <th scope="col">Promedio Semanal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20°C</td>
+        <td>35°C</td>
+        <td>27°C</td>
+      </tr>
+    </tbody>
+  </table>
+  
+<!--TODO: Mensaje de resumen-->
+    <div class="border border-info rounded p-4">
+      <p>Resumen de datos semanales</p>
+    </div>
+  </section>   
 </main>
 <!--Footer-->
 <footer class="py-3 my-4"> 

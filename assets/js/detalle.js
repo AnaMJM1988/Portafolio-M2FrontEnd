@@ -332,3 +332,35 @@ const locationId = urlParams.get("id");
 //console.log(locationId);
 
 //Filtrar el lugar del array a partir del ID
+const LugarEncontrado=lugares.find((lugar)=> lugar.id==locationId)
+console.log(LugarEncontrado);
+
+// Cappturar contenedor de información del lugar
+const LugarContainer=document.getElementById('lugar');
+
+const mostrarLugar=()=>{
+  const content =`
+          <div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+      <i class="bi ${ICONOS[LugarEncontrado.estadoActual]}" style="font-size: 90px"></i>
+    </div>
+    <div class="col-lg-8">
+      <div class="card-body">
+        <h2 class="card-title">${LugarEncontrado.nombre}</h2>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item">${LugarEncontrado.estadoActual}</li>
+           <li class="list-group-item">Temperatura: ${LugarEncontrado.tempActual}°C </li>
+           
+        </ul>
+        <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+LugarContainer.innerHTML=content;
+
+};
+mostrarLugar();
