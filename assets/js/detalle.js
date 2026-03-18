@@ -1,3 +1,5 @@
+import lugares from "./lugares.js";
+
 //Manejo del DOM con JS
  
 //Manejo de Evento
