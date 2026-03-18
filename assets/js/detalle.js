@@ -67,9 +67,19 @@ const mostrarLugar=()=>{
 </div>
 `;
 
-LugarContainer.innerHTML=content;
+  LugarContainer.innerHTML=content;
 
 };
 mostrarLugar();
-//TODO: mostrar sección de pronóstico semanal
+//mostrar sección de pronóstico semanal
+const pronosticoContainer = document.getElementById('pronosticoSemanal');
+console.log(ciudadActual.pronosticoSemanal);
+ciudadActual.pronosticoSemanal.forEach((dia)=>{
+  const content =`
+          <li class="list-group-item">
+              <i class="bi ${ICONOS[dia.estado]}"></i> ${dia.dia} : ${dia.max}°C
+              </li>
+`;
+pronosticoContainer.innerHTML += content;
+});
 //TODO: mostrar estsadísticas semanales.
