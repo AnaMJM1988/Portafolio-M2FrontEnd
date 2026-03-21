@@ -52,12 +52,12 @@
   </div>
 </nav> 
 <main class="container my-4">
-    <div class="row">
-      <h1>El tiempo en:</h1>
+    <section class="row">
         <div class="col col-lg-8" id="lugar">
-          </div>
+            <h1>El tiempo en:</h1>
+          
       <!--El lugar del contenido se mostrará dinámicamente-->
-        
+        </div>
 
         <div class="col col-lg-4">
           <h3>Pronóstico semanal</h3>
@@ -65,13 +65,12 @@
           <!--Card pronóstico-->
           <div class="card">
              <ul class="list-group list-group-flush" id="pronosticoSemanal">
-              
-              
+              <!--Pronóstico de la ciudad se mostrará dinámicamente-->
             
             </ul>
           </div>
         </div>
-    </section>   
+  </section>   
   <section class="mt-5">
     <h3>Estadísticas de la semana</h3>
   <table class="table">
@@ -84,17 +83,30 @@
     </thead>
     <tbody>
       <tr>
-        <td>20°C</td>
-        <td>35°C</td>
-        <td>27°C</td>
+        <!--Temperaturas de la ciudad se actualizarán dinámicamente-->
+        <td id="minTemp">20°C</td>
+        <td id="maxTemp">35°C</td>
+        <td id="avTemp">27°C</td>
       </tr>
     </tbody>
   </table>
   
 <!--TODO: Mensaje de resumen-->
-    <div class="border border-info rounded p-4">
-      <p>Resumen de datos semanales</p>
-    </div>
+    <div class="border border-info rounded p-4" id="resumen"></div>
+    <table class="table">
+      <thead>
+        <tr id="titulosEstadistica">
+          <!--contenido se generará dinámicamente-->
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="filaEstadistica">
+          <!---->
+
+        </tr>
+      </tbody>
+    </table>
   </section>   
 </main>
 <!--Footer-->
