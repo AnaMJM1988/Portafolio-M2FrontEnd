@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-soft: #fff7fb;
+  --bg-accent: #fdeef5;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: #ffffff;
+  --text-main: #3b2431;
+  --text-soft: #735160;
+  --brand: #c85d88;
+  --brand-dark: #a94a72;
+  --line: #efccda;
+  --shadow: 0 14px 40px rgba(135, 67, 96, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 10% 15%, #ffe2ee 0%, rgba(255, 226, 238, 0) 40%),
+    radial-gradient(circle at 90% 5%, #ffe8cf 0%, rgba(255, 232, 207, 0) 35%),
+    linear-gradient(140deg, var(--bg-soft) 0%, var(--bg-accent) 100%);
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.4px;
+}
+
+.container {
+  position: relative;
+}
+
+.card,
+.table,
+form.border,
+.border.rounded-3,
+#resumen {
+  border: 1px solid var(--line) !important;
+  background: var(--surface);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+}
+
+.card {
+  border-radius: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px rgba(135, 67, 96, 0.18);
+}
+
+.btn-primary,
+.btn-brand {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--brand) 0%, #df7ca2 100%);
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-brand:hover {
+  background: linear-gradient(120deg, var(--brand-dark) 0%, var(--brand) 100%);
+}
+
+.form-control,
+.form-check-input {
+  border-color: #dcb5c7;
+}
+
+.form-control:focus,
+.form-check-input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(200, 93, 136, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+.table {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background: #fff0f7;
+  color: #5a3346;
+}
+
+a,
+.nav-link,
+.card-link {
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+a:hover,
+.nav-link:hover,
+.card-link:hover {
+  color: #8f3f60;
+}
